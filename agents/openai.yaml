@@ -1,0 +1,4 @@
+interface:
+  display_name: "小红书 AI 图文制作"
+  short_description: "从混合素材完成选题核查、脚本规划与统一风格图文成品"
+  default_prompt: "使用 $xiaohongshu-ai-carousel 分析我提供的素材，先提出选题方案，确认后制作小红书图文。"
