@@ -24,7 +24,7 @@ Create a publish-ready knowledge carousel. Treat user inputs as a source pool, n
 6. Generate the cover first. Lock the visual system with user feedback before generating the remaining pages.
 7. Generate one distinct image per page. Use the locked cover and most recent approved interior page as style references. Keep each page useful on its own while preserving a clear swipe narrative.
 8. Inspect every image at full resolution. Regenerate any page with wrong Chinese, misspelled corner text, illegible hierarchy, inconsistent materials, duplicated objects, broken hands/faces, or wrong ratio.
-9. Save final images in the project, numbered in publishing order. Run `python3 scripts/validate_carousel.py <output-folder>` and fix every reported error.
+9. Save final images in the project, numbered in publishing order. Run `python3 scripts/validate_carousel.py <output-folder>` to enforce the default 4–8 page range and fix every reported error.
 10. Deliver the ordered images plus one recommended title, two alternatives, a body under 200 Chinese characters, and focused hashtags.
 
 ## Editorial rules

@@ -111,7 +111,13 @@ xiaohongshu-ai-carousel/
 python3 scripts/validate_carousel.py /path/to/output-folder
 ```
 
-校验脚本会检查图片数量、文件命名、画幅比例和分辨率等基础要求。内容准确性、文字可读性和视觉一致性仍需结合质检清单逐张检查。
+校验脚本默认要求 4–8 张图片，并检查文件命名、画幅比例和分辨率等基础要求。可以用 `--min-pages` 和 `--max-pages` 覆盖页数范围：
+
+```bash
+python3 scripts/validate_carousel.py /path/to/output-folder --min-pages 6 --max-pages 6
+```
+
+内容准确性、文字可读性和视觉一致性仍需结合质检清单逐张检查。
 
 ## 许可证
 
