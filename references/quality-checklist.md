@@ -20,6 +20,7 @@
 ## Visuals
 
 - [ ] At least four images are present and ordered.
+- [ ] No more than eight images are present unless the longer set was explicitly approved.
 - [ ] Every image is 3:4 portrait at sufficient resolution.
 - [ ] The cover title is dominant and mobile-readable.
 - [ ] Explanatory text stays at the top or bottom.

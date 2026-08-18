@@ -60,10 +60,16 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("folder", type=Path)
     parser.add_argument("--min-pages", type=int, default=4)
+    parser.add_argument("--max-pages", type=int, default=8)
     parser.add_argument("--ratio-tolerance", type=float, default=0.01)
     parser.add_argument("--min-width", type=int, default=1000)
     parser.add_argument("--min-height", type=int, default=1333)
     args = parser.parse_args()
+
+    if args.min_pages < 1:
+        parser.error("--min-pages must be at least 1")
+    if args.max_pages < args.min_pages:
+        parser.error("--max-pages must be greater than or equal to --min-pages")
 
     if not args.folder.is_dir():
         print(f"ERROR: not a folder: {args.folder}")
@@ -73,6 +79,8 @@ def main() -> int:
     errors: list[str] = []
     if len(files) < args.min_pages:
         errors.append(f"expected at least {args.min_pages} images, found {len(files)}")
+    if len(files) > args.max_pages:
+        errors.append(f"expected at most {args.max_pages} images, found {len(files)}")
 
     expected_numbers = list(range(1, len(files) + 1))
     actual_numbers: list[int] = []
